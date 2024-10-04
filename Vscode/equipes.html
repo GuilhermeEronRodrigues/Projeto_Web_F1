@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipes de F1</title>
+    <link rel="icon" href="Favicon/F1_ico_64x64.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    body {
+    margin: 0;
+    font-family: 'Formula1-Bold', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+     }
+    .cars-grid {
+    display: grid;
+    background-color: #ffffff;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    justify-items: center;
+    margin: 20px 0;
+}
+
+.cars-grid .car-item {
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.car-item img {
+    width: 150%;
+    max-width: 380px;
+}
+
+
+.cars-grid .car-item:nth-child(1) {
+    grid-column: 1 / span 3;
+}
+
+
+.car-item:hover {
+    transform: scale(1.05);
+}
+
+
+
+.car-item.aston-martin:hover {
+    box-shadow: 0 0 15px 5px #33a587; /* Verde da Aston Martin */
+}
+
+.car-item.red-bull:hover {
+    box-shadow: 0 0 15px 5px #001dc4; /* Azul da Red Bull */
+}
+
+.car-item.ferrari:hover {
+    box-shadow: 0 0 15px 5px #dc0000; /* Vermelho da Ferrari */
+}
+
+.car-item.mercedes:hover {
+    box-shadow: 0 0 15px 5px #00d2be; /* Verde-água da Mercedes */
+}
+
+.car-item.haas:hover {
+    box-shadow: 0 0 15px 5px #6d6e71; /* Cinza da Haas */
+}
+
+.car-item.mclaren:hover {
+    box-shadow: 0 0 15px 5px #ff8700; /* Laranja da McLaren */
+}
+
+.car-item.alpine:hover {
+    box-shadow: 0 0 15px 5px #0090ff; /* Azul da Alpine */
+}
+.car-item.rb:hover{
+    box-shadow: 0 0 15px 5px #1434CB /* Azul Metalico da RB */ 
+}
+
+.car-item.sauber:hover {
+    box-shadow: 0 0 15px 5px #21f541; /* Verde da Sauber */
+}
+
+.car-item.williams:hover {
+    box-shadow: 0 0 15px 5px #679cff; /* Azul da Williams */
+}
+
+    
+
+.car-name {
+font-size: 22px;
+font-weight: bold;
+ margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+
+    
+    <div class="navbar">
+        <a href="index.html" class="navbar-item logo">
+            <img src="Imagens/Logos/f1_logo.png" alt="F1 Logo">
+        </a>
+        <a href="oque-e-a-f1.html" class="navbar-item">O que é a F1?</a>
+        <a href="equipes.html" class="navbar-item">Equipes</a>
+        <a href="pilotos.html" class="navbar-item">Pilotos</a>
+        <a href="calendario2025.html" class="navbar-item">Calendário 2025</a>
+    </div>
+
+    <!-- Grid dos carros -->
+    <div class="cars-grid">
+        <div class="car-item aston-martin">
+            <img src="Imagens/Carros/aston-martin.png" alt="Aston Martin">
+            <div class="car-name">Aston Martin</div>
+        </div>
+        <div class="car-item red-bull">
+            <a href="redbull.html">
+            <img src="Imagens/Carros/red-bull-racing.png" alt="Red Bull Racing">
+        </a>
+            <div class="car-name">Red Bull Racing</div>
+        </div>
+        <div class="car-item ferrari">
+            <img src="Imagens/Carros/ferrari.png" alt="Ferrari">
+            <div class="car-name">Ferrari</div>
+        </div>
+        <div class="car-item mercedes">
+            <img src="Imagens/Carros/mercedes.png" alt="Mercedes">
+            <div class="car-name">Mercedes</div>
+        </div>
+        <div class="car-item rb">
+            <img src="Imagens/Carros/rb.png" alt="RB">
+            <div class="car-name">RB</div>
+        </div>
+        <div class="car-item haas">
+            <img src="Imagens/Carros/haas.png" alt="Haas">
+            <div class="car-name">Haas</div>
+        </div>
+        <div class="car-item mclaren">
+            <img src="Imagens/Carros/mclaren.png" alt="McLaren">
+            <div class="car-name">McLaren</div>
+        </div>
+        <div class="car-item alpine">
+            <img src="Imagens/Carros/alpine.png" alt="Alpine">
+            <div class="car-name">Alpine</div>
+        </div>
+        <div class="car-item sauber">
+            <img src="Imagens/Carros/kick-sauber.png" alt="Kick Sauber">
+            <div class="car-name">Kick Sauber</div>
+        </div>
+        <div class="car-item williams">
+            <img src="Imagens/Carros/williams.png" alt="Williams">
+            <div class="car-name">Williams</div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Fórmula 1. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+
+</body>
+</html>

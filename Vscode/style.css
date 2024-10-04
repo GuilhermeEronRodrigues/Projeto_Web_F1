@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Formula1-Bold';
+    src: url('Fontes/Formula1-Bold_web_0.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Formula1-Regular';
+    src: url('Fontes/Formula1-Regular_web_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Estilo da Navbar Sticky */
+.navbar {
+    background-color: #e10600;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item.logo img {
+    height: 30px;
+    color: #ffffff;
+    background: #e10600;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar-item:hover {
+    color: #e10600;
+    background: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* Footer */
+footer {
+    background-color: #e10600;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #ff3d00;
+    text-decoration: none;
+}

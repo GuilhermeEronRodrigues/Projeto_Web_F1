@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Bull Racing</title>
+    <link rel="icon" href="Favicon/F1_ico_64x64.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo geral */
+        body {
+            background-color: #f8f8f8; /* Off-white */
+            font-family: 'Formula1-Bold', Arial, sans-serif;
+            color: #000000; /* Texto preto */
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Nome da Equipe */
+        .team-name {
+            font-size: 4rem; /* Grande tamanho */
+            color: #ff3d00; /* Vermelho */
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Cartões e Transições */
+        .card, .team-info, .driver-list {
+            background-color: #ffffff; /* Branco */
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 800px; /* Largura máxima para o conteúdo */
+        }
+
+        .card:hover, .team-info:hover, .driver:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Títulos */
+        h2, h3 {
+            font-family: 'Formula1-Bold', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #ff3d00; /* Vermelho */
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-top: 15px;
+            color: #000000; /* Nome dos pilotos em preto */
+            font-weight: bold; /* Nome em negrito */
+        }
+
+        /* Efeito hover nos botões */
+        .button {
+            background-color: #ff3d00; /* Vermelho */
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff5722; /* Cor ao passar o mouse */
+        }
+
+        /* Informações e Pilotos lado a lado */
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            text-align: left;
+        }
+
+        .team-info {
+            width: 50%;
+        }
+
+        .team-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .team-info ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .driver-list {
+            width: 40%;
+        }
+
+        .driver {
+            margin-bottom: 30px;
+        }
+
+        .driver img {
+            width: 150px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .driver img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Logo da Equipe */
+        .team-logo {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .team-logo img {
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-logo img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Seção de Imagens */
+        .images-section {
+            padding: 50px 20px;
+            background-color: #111;
+            text-align: center;
+        }
+
+        .images-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .image-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .image-grid img {
+            width: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Resumo da Equipe */
+        .team-summary {
+            padding: 50px;
+            text-align: center;
+            font-size: 18px;
+            background-color: #222;
+            color: #ddd;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .content-wrapper {
+                flex-direction: column;
+                padding: 30px;
+            }
+
+            .team-info, .driver-list {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .button {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="navbar-item logo">
+            <img src="Imagens/Logos/f1_logo.png" alt="F1 Logo">
+        </a>
+        <a href="oque-e-a-f1.html" class="navbar-item">O que é a F1?</a>
+        <a href="equipes.html" class="navbar-item">Equipes</a>
+        <a href="pilotos.html" class="navbar-item">Pilotos</a>
+        <a href="calendario2025.html" class="navbar-item">Calendário 2025</a>
+    </div>
+
+    <!-- Nome da Equipe -->
+    <div class="team-name">Red Bull Racing</div>
+
+    <!-- Informações da Equipe e Pilotos -->
+    <div class="content-wrapper card">
+        <div class="team-info card">
+            <h2>Informações da Equipe</h2>
+            <ul>
+                <li><strong>Nome Completo:</strong> Oracle Red Bull Racing</li>
+                <li><strong>Base:</strong> Milton Keynes, Reino Unido</li>
+                <li><strong>Chefe de Equipe:</strong> Christian Horner</li>
+                <li><strong>Chefe Técnico:</strong> Pierre Waché</li>
+                <li><strong>Chassi:</strong> RB20</li>
+                <li><strong>Unidade de Potência:</strong> Honda RBPT</li>
+                <li><strong>Primeira Participação:</strong> 1997</li>
+                <li><strong>Campeonatos Mundiais:</strong> 6</li>
+                <li><strong>Melhor Colocação:</strong> 1 (x120)</li>
+                <li><strong>Poles:</strong> 105</li>
+                <li><strong>Voltas Mais Rápidas:</strong> 98</li>
+            </ul>
+        </div>
+
+        <!-- Pilotos -->
+        <div class="driver-list card">
+            <div class="driver">
+                <a href="verstappen.html">
+                    <img src="Imagens/Pilotos/verstappen.png" alt="Max Verstappen">
+                    <h3>Max Verstappen</h3>
+                </a>
+                <p>Piloto Principal</p>
+            </div>
+            <div class="driver">
+                <a href="perez.html">
+                    <img src="Imagens/Pilotos/perez.png" alt="Sergio Perez">
+                    <h3>Sergio Perez</h3>
+                </a>
+                <p>Piloto Secundário</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo da Equipe -->
+    <div class="team-logo">
+        <img src="Imagens/Equipes/red_bull-removebg-preview.png" alt="Red Bull Racing Logo">
+    </div>
+
+
+ <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Fórmula 1. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+
+</body>
+</html>
