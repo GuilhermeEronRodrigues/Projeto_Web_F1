@@ -11,29 +11,29 @@
         body {
             background-color: #f8f8f8; /* Off-white */
             font-family: 'Formula1-Bold', Arial, sans-serif;
-            color: #000000; /* Texto preto */
+            color: #000000;
             margin: 0;
             text-align: center;
         }
 
         /* Nome da Equipe */
         .team-name {
-            font-size: 4rem; /* Grande tamanho */
-            color: #ff3d00; /* Vermelho */
+            font-size: 4rem;
+            color: #e10600;
             margin-top: 20px;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         /* Cartões e Transições */
-        .card, .team-info, .driver-list {
-            background-color: #ffffff; /* Branco */
+        .card, .team-info, .driver-list,.driver {
+            background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             padding: 20px;
             margin: 20px auto;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            max-width: 800px; /* Largura máxima para o conteúdo */
+            max-width: 800px;
         }
 
         .card:hover, .team-info:hover, .driver:hover {
@@ -46,45 +46,34 @@
             font-family: 'Formula1-Bold', sans-serif;
             font-weight: 700;
             letter-spacing: 1px;
-            color: #ff3d00; /* Vermelho */
+            color: #e10600;
         }
 
         h2 {
             font-size: 2.5rem;
+            flex-basis: 100%;
+            margin-bottom: 20px; 
         }
 
         h3 {
             font-size: 2rem;
             margin-top: 15px;
-            color: #000000; /* Nome dos pilotos em preto */
-            font-weight: bold; /* Nome em negrito */
+            color: #000000;
         }
 
-        /* Efeito hover nos botões */
-        .button {
-            background-color: #ff3d00; /* Vermelho */
-            border: none;
-            padding: 15px 30px;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #ff5722; /* Cor ao passar o mouse */
-        }
-
-        /* Informações e Pilotos lado a lado */
+        
         .content-wrapper {
             display: flex;
             justify-content: space-between;
             padding: 50px;
+            max-width: 1350px;
+            margin: 50 auto;
             text-align: left;
+            width: 100%;
         }
 
         .team-info {
-            width: 50%;
+            width: 42%;
         }
 
         .team-info ul {
@@ -98,31 +87,42 @@
         }
 
         .driver-list {
-            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            width: 50%;
+            
         }
 
         .driver {
-            margin-bottom: 30px;
+        text-align: center;
+        flex: 1;
+        margin: 0 10px;
         }
 
         .driver img {
-            width: 150px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
+        width: 250px;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
         }
 
         .driver img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         /* Logo da Equipe */
         .team-logo {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 50px;    
         }
 
         .team-logo img {
-            width: 300px;
+            width: 600px;
             transition: transform 0.3s ease;
         }
 
@@ -158,13 +158,13 @@
             transform: scale(1.1);
         }
 
-        /* Resumo da Equipe */
+       
         .team-summary {
             padding: 50px;
             text-align: center;
             font-size: 18px;
-            background-color: #222;
-            color: #ddd;
+            background-color: #f8f8f8;
+            color: #000000;
         }
 
         /* Responsividade */
@@ -229,10 +229,10 @@
         <a href="calendario2025.html" class="navbar-item">Calendário 2025</a>
     </div>
 
-    <!-- Nome da Equipe -->
+    
     <div class="team-name">Red Bull Racing</div>
 
-    <!-- Informações da Equipe e Pilotos -->
+    
     <div class="content-wrapper card">
         <div class="team-info card">
             <h2>Informações da Equipe</h2>
@@ -270,16 +270,35 @@
         </div>
     </div>
 
-    <!-- Logo da Equipe -->
+    
     <div class="team-logo">
         <img src="Imagens/Equipes/red_bull-removebg-preview.png" alt="Red Bull Racing Logo">
+    </div>
+
+    <!-- Galeria de Imagens -->
+    <div class="images-section">
+        <h2>Galeria de Imagens</h2>
+        <div class="image-grid">
+            <img src="Imagens/RedBull/redbull.img1.png" alt="Imagem 1">
+            <img src="Imagens/RedBull/redbull.img2.png" alt="Imagem 2">
+            <img src="Imagens/RedBull/redbull.img3.png" alt="Imagem 3">
+            <img src="Imagens/RedBull/redbull.img4.png" alt="Imagem 4">
+            <img src="Imagens/RedBull/redbull.img5.png" alt="Imagem 5">
+            <img src="Imagens/RedBull/redbull.img6.png" alt="Imagem 6">
+        </div>
+    </div>
+
+    <!-- Resumo da Equipe -->
+    <div class="team-summary">
+        <h2>Em destaque</h2>
+        <p>A Red Bull não era estranha à F1 - como patrocinadora - antes de entrar formalmente como uma equipe de fábrica em 2004. No entanto, a magnitude de seu sucesso na década seguinte foi impressionante. Após um primeiro pódio em 2006, a equipe encontrou seu ritmo em 2009, conquistando seis vitórias e o segundo lugar no campeonato de construtores. Nos quatro anos seguintes, foram uma força dominante, conquistando títulos consecutivos entre 2010 e 2013, com Sebastian Vettel se destacando como o mais jovem quadruplicado campeão da história do esporte. Agora, eles estão recuperando essa glória com um talento igualmente empolgante - um chamado Max Verstappen...</p>
     </div>
 
 
  <!-- Footer -->
     <footer>
         <p>&copy; 2025 Fórmula 1. Todos os direitos reservados.</p>
-        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+        <p><a href="">Política de Privacidade</a> | <a href="">Termos de Uso</a></p>
     </footer>
 
 </body>
