@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Bull Racing</title>
     <link rel="icon" href="Favicon/F1_ico_64x64.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    
     <style>
-        /* Estilo geral */
+        /* Estilo geral do corpo */
         body {
-            background-color: #f8f8f8; /* Off-white */
-            font-family: 'Formula1-Bold', Arial, sans-serif;
-            color: #000000;
+            background-color: #f8f8f8; /* Cor de fundo suave */
+            font-family: 'Formula1-Bold', Arial, sans-serif; /* Fonte personalizada */
+            color: #000000; /* Cor do texto */
             margin: 0;
             text-align: center;
         }
@@ -19,49 +21,50 @@
         /* Nome da Equipe */
         .team-name {
             font-size: 4rem;
-            color: #e10600;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: #e10600; /* Vermelho característico da Red Bull */
+            margin: 20px 0 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
         }
 
-        /* Cartões e Transições */
-        .card, .team-info, .driver-list,.driver {
+        /* Cartões e Efeitos de Transição */
+        .card, .team-info, .driver-list, .driver, .team-summary {
             background-color: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
             padding: 20px;
             margin: 20px auto;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             max-width: 800px;
         }
 
-        .card:hover, .team-info:hover, .driver:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+        /* Efeito de Hover nos cartões */
+        .card:hover, .team-info:hover, .driver:hover, .team-summary:hover {
+            transform: scale(1.05); /* Efeito de crescimento ao passar o mouse */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra no hover */
         }
 
-        /* Títulos */
+        /* Títulos principais */
         h2, h3 {
-            font-family: 'Formula1-Bold', sans-serif;
+            font-family: 'Formula1-Bold', sans-serif; /* Fonte personalizada para títulos */
             font-weight: 700;
-            letter-spacing: 1px;
-            color: #e10600;
+            letter-spacing: 1px; /* Espaçamento entre letras */
+            color: #e10600; /* Vermelho da Red Bull */
         }
 
+        /* Título principal (h2) */
         h2 {
             font-size: 2.5rem;
-            flex-basis: 100%;
             margin-bottom: 20px; 
         }
 
+        /* Título secundário (h3) */
         h3 {
             font-size: 2rem;
             margin-top: 15px;
-            color: #000000;
+            color: #000000; /* Preto */
         }
 
-        
+        /* Wrapper para alinhar o conteúdo */
         .content-wrapper {
             display: flex;
             justify-content: space-between;
@@ -72,20 +75,19 @@
             width: 100%;
         }
 
-        .team-info {
-            width: 42%;
-        }
-
-        .team-info ul {
-            list-style-type: none;
-            padding: 0;
+        /* Estilo da lista de informações da equipe */
+        .team-info ul li strong {
+            font-family: 'Formula1-Bold', Arial, sans-serif;
+            color: #b22222; /* Vermelho escuro */
         }
 
         .team-info ul li {
+            font-family: 'Formula1-Regular';
             margin-bottom: 10px;
-            font-size: 18px;
+            font-size: 18px; /* Tamanho confortável para leitura */
         }
 
+        /* Estilo para a lista de pilotos */
         .driver-list {
             display: flex;
             justify-content: space-around;
@@ -95,27 +97,31 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             margin: 20px auto;
             width: 50%;
-            
+        }
+
+        /* Links e Imagens dos Pilotos */
+        .driver a {
+            text-decoration: none;
+            color: #000;
         }
 
         .driver {
-        text-align: center;
-        flex: 1;
-        margin: 0 10px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
         }
 
         .driver img {
-        width: 250px;
-        height: auto;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
+            width: 250px;
+            border-radius: 10px; /* Cantos arredondados */
+            transition: transform 0.3s ease;
         }
 
         .driver img:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
         }
 
-        /* Logo da Equipe */
+        /* Logo da equipe */
         .team-logo {
             text-align: center;
             margin-top: 50px;    
@@ -127,13 +133,13 @@
         }
 
         .team-logo img:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* Efeito de zoom no logo */
         }
 
-        /* Seção de Imagens */
+        /* Seção de imagens com layout flexível */
         .images-section {
             padding: 50px 20px;
-            background-color: #111;
+            background-color: rgba(0, 0, 0, 0.056);
             text-align: center;
         }
 
@@ -142,37 +148,36 @@
             margin-bottom: 20px;
         }
 
+        /* Grelha de imagens */
         .image-grid {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 20px; /* Espaço entre as imagens */
         }
 
         .image-grid img {
             width: 200px;
-            border-radius: 10px;
+            margin: 20%;
+            border-radius: 15px;
             transition: transform 0.3s ease;
+            cursor: pointer; /* Aparece como clicável */
         }
 
-        .image-grid img:hover {
-            transform: scale(1.1);
-        }
-
-       
+        /* Estilo para o resumo da equipe */
         .team-summary {
             padding: 50px;
             text-align: center;
             font-size: 18px;
             background-color: #f8f8f8;
             color: #000000;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: auto;
+            margin-bottom: 20px;
         }
-
-        /* Responsividade */
+        
+        /* Responsividade para telas menores */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
             h2 {
                 font-size: 2rem;
             }
@@ -190,18 +195,10 @@
                 width: 100%;
                 margin-bottom: 30px;
             }
-
-            .button {
-                padding: 10px 20px;
-                font-size: 1rem;
-            }
         }
 
+        /* Ajustes para telas muito pequenas */
         @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-
             h2 {
                 font-size: 1.8rem;
             }
@@ -209,16 +206,90 @@
             h3 {
                 font-size: 1.3rem;
             }
-
-            .button {
-                padding: 8px 15px;
-                font-size: 0.9rem;
-            }
         }
+
+        /* Lightbox para ampliar imagens */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Fundo preto transparente */
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Mostra o lightbox ao clicar */
+        .lightbox:target {
+            display: flex;
+        }
+
+        /* Imagem dentro do lightbox */
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        /* Botão de fechar o lightbox */
+        .close-lightbox {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 30px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .close-lightbox:hover {
+            color: #ccc;
+        }
+        /* Setas de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Posiciona as setas corretamente */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.close-lightbox:hover {
+    color: #ccc;
+}
+
     </style>
 </head>
+
 <body>
 
+    <!-- Barra de Navegação -->
     <div class="navbar">
         <a href="index.html" class="navbar-item logo">
             <img src="Imagens/Logos/f1_logo.png" alt="F1 Logo">
@@ -229,10 +300,10 @@
         <a href="calendario2025.html" class="navbar-item">Calendário 2025</a>
     </div>
 
-    
+    <!-- Nome da Equipe -->
     <div class="team-name">Red Bull Racing</div>
 
-    
+    <!-- Informações da equipe e Pilotos -->
     <div class="content-wrapper card">
         <div class="team-info card">
             <h2>Informações da Equipe</h2>
@@ -245,61 +316,103 @@
                 <li><strong>Unidade de Potência:</strong> Honda RBPT</li>
                 <li><strong>Primeira Participação:</strong> 1997</li>
                 <li><strong>Campeonatos Mundiais:</strong> 6</li>
-                <li><strong>Melhor Colocação:</strong> 1 (x120)</li>
-                <li><strong>Poles:</strong> 105</li>
-                <li><strong>Voltas Mais Rápidas:</strong> 98</li>
+                <li><strong>Vitórias:</strong> 117</li>
+                <li><strong>Poles:</strong> 101</li>
             </ul>
         </div>
 
-        <!-- Pilotos -->
-        <div class="driver-list card">
+        <div class="driver-list">
             <div class="driver">
                 <a href="verstappen.html">
                     <img src="Imagens/Pilotos/verstappen.png" alt="Max Verstappen">
                     <h3>Max Verstappen</h3>
                 </a>
-                <p>Piloto Principal</p>
             </div>
+
             <div class="driver">
                 <a href="perez.html">
                     <img src="Imagens/Pilotos/perez.png" alt="Sergio Perez">
                     <h3>Sergio Perez</h3>
                 </a>
-                <p>Piloto Secundário</p>
             </div>
         </div>
     </div>
 
-    
+    <!-- Logo da Equipe -->
     <div class="team-logo">
         <img src="Imagens/Equipes/red_bull-removebg-preview.png" alt="Red Bull Racing Logo">
     </div>
 
-    <!-- Galeria de Imagens -->
+    <!-- Seção de Imagens -->
     <div class="images-section">
-        <h2>Galeria de Imagens</h2>
+        <h2>Imagens da Equipe</h2>
         <div class="image-grid">
-            <img src="Imagens/RedBull/redbull.img1.png" alt="Imagem 1">
-            <img src="Imagens/RedBull/redbull.img2.png" alt="Imagem 2">
-            <img src="Imagens/RedBull/redbull.img3.png" alt="Imagem 3">
-            <img src="Imagens/RedBull/redbull.img4.png" alt="Imagem 4">
-            <img src="Imagens/RedBull/redbull.img5.png" alt="Imagem 5">
-            <img src="Imagens/RedBull/redbull.img6.png" alt="Imagem 6">
+            <a href="#lightbox-1"><img src="Imagens/RedBull/redbull.img1.png" alt="Imagem 1"></a>
+            <a href="#lightbox-2"><img src="Imagens/RedBull/redbull.img2.png" alt="Imagem 2"></a>
+            <a href="#lightbox-3"><img src="Imagens/RedBull/redbull.img3.png" alt="Imagem 3"></a>
+            <a href="#lightbox-4"><img src="Imagens/RedBull/redbull.img4.png" alt="Imagem 4"></a>
+            <a href="#lightbox-5"><img src="Imagens/RedBull/redbull.img5.png" alt="Imagem 5"></a>
+            <a href="#lightbox-6"><img src="Imagens/RedBull/redbull.img6.png" alt="Imagem 6"></a>
         </div>
-    </div>
+
+        <!-- Lightboxes para ampliar as imagens com navegação -->
+<div class="lightbox" id="lightbox-1">
+    <a href="#lightbox-3" class="prev">&larr;</a>  <!-- Link para imagem anterior -->
+    <img src="Imagens/RedBull/redbull.img1.png" alt="Imagem ampliada 1">
+    <a href="#lightbox-2" class="next">&rarr;</a>  <!-- Link para próxima imagem -->
+    <a href="#!" class="close-lightbox">&times;</a> <!-- Fechar lightbox -->
+</div>
+
+<div class="lightbox" id="lightbox-2">
+    <a href="#lightbox-1" class="prev">&larr;</a>  <!-- Link para imagem anterior -->
+    <img src="Imagens/RedBull/redbull.img2.png" alt="Imagem ampliada 2">
+    <a href="#lightbox-3" class="next">&rarr;</a>  <!-- Link para próxima imagem -->
+    <a href="#!" class="close-lightbox">&times;</a> <!-- Fechar lightbox -->
+</div>
+
+<div class="lightbox" id="lightbox-3">
+    <a href="#lightbox-2" class="prev">&larr;</a>  <!-- Link para imagem anterior -->
+    <img src="Imagens/RedBull/redbull.img3.png" alt="Imagem ampliada 3">
+    <a href="#lightbox-4" class="next">&rarr;</a>  <!-- Link para próxima imagem -->
+    <a href="#!" class="close-lightbox">&times;</a> <!-- Fechar lightbox -->
+</div>
+<div class="lightbox" id="lightbox-4">
+    <a href="#lightbox-3" class="prev">&larr;</a>  <!-- Link para imagem anterior -->
+    <img src="Imagens/RedBull/redbull.img4.png" alt="Imagem ampliada 3">
+    <a href="#lightbox-5" class="next">&rarr;</a>  <!-- Link para próxima imagem -->
+    <a href="#!" class="close-lightbox">&times;</a> <!-- Fechar lightbox -->
+</div>
+
+<div class="lightbox" id="lightbox-5">
+    <a href="#lightbox-4" class="prev">&larr;</a>  <!-- Link para imagem anterior -->
+    <img src="Imagens/RedBull/redbull.img5.png" alt="Imagem ampliada 3">
+    <a href="#lightbox-6" class="next">&rarr;</a>  <!-- Link para próxima imagem -->
+    <a href="#!" class="close-lightbox">&times;</a> <!-- Fechar lightbox -->
+</div>
+
+<div class="lightbox" id="lightbox-6">
+    <a href="#lightbox-5" class="prev">&larr;</a>  <!-- Link para imagem anterior -->
+    <img src="Imagens/RedBull/redbull.img6.png" alt="Imagem ampliada 3">
+    <a href="#lightbox-1" class="next">&rarr;</a>  <!-- Link para próxima imagem -->
+    <a href="#!" class="close-lightbox">&times;</a> <!-- Fechar lightbox -->
+</div>
+
+
 
     <!-- Resumo da Equipe -->
     <div class="team-summary">
-        <h2>Em destaque</h2>
-        <p>A Red Bull não era estranha à F1 - como patrocinadora - antes de entrar formalmente como uma equipe de fábrica em 2004. No entanto, a magnitude de seu sucesso na década seguinte foi impressionante. Após um primeiro pódio em 2006, a equipe encontrou seu ritmo em 2009, conquistando seis vitórias e o segundo lugar no campeonato de construtores. Nos quatro anos seguintes, foram uma força dominante, conquistando títulos consecutivos entre 2010 e 2013, com Sebastian Vettel se destacando como o mais jovem quadruplicado campeão da história do esporte. Agora, eles estão recuperando essa glória com um talento igualmente empolgante - um chamado Max Verstappen...</p>
+        A Red Bull Racing tem sido uma das equipes mais dominantes da Fórmula 1 nas últimas décadas, conquistando
+        vários títulos de pilotos e construtores. Com sua sede no Reino Unido e liderada por Christian Horner, a
+        equipe continua inovando e desafiando seus rivais com desempenho e tecnologia de ponta. Desde sua
+        parceria com a Honda, a Red Bull tem desfrutado de uma nova era de sucesso.
     </div>
 
 
- <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Fórmula 1. Todos os direitos reservados.</p>
-        <p><a href="">Política de Privacidade</a> | <a href="">Termos de Uso</a></p>
-    </footer>
 
+ <!-- Footer -->
+ <footer>
+    <p>&copy; 2025 Fórmula 1. Todos os direitos reservados.</p>
+    <p><a href="">Política de Privacidade</a> | <a href="">Termos de Uso</a></p>
+</footer>
 </body>
 </html>
