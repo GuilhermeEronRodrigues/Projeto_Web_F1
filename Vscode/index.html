@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="icon" href="Favicon/F1_ico_64x64.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <style>
-         body {
+        body {
             margin: 0;
             font-family: 'Formula1-Bold', Arial, sans-serif;
             color: white;
@@ -15,7 +16,8 @@
             text-align: center;
             overflow: hidden;
         }
-            .hero-section {
+
+        .hero-section {
             position: relative;
             height: 100vh;
             background-image: url('Imagens/Back_Ground/pg_inicial.png');
@@ -26,7 +28,8 @@
             align-items: center;
             text-align: center;
         }
-        .hero-section::before{
+
+        .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -36,12 +39,13 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
+
         .hero-section h1,
         .hero-section p {
             position: relative;
             z-index: 2;
         }
-        
+
 
         .hero-section::after {
             content: "";
@@ -87,6 +91,7 @@
             background-color: #e10600;
             color: white;
         }
+
         .modal {
             display: none;
             position: fixed;
@@ -96,7 +101,7 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         .modal-content {
@@ -128,9 +133,9 @@
             width: 100%;
             height: 450px;
         }
-
     </style>
 </head>
+
 <body>
 
     <div class="navbar">
@@ -142,46 +147,44 @@
         <a href="pilotos.html" class="navbar-item">Pilotos</a>
         <a href="calendario2025.html" class="navbar-item">Calendário 2025</a>
     </div>
-    
+
     <div class="hero-section">
         <div class="hero-content">
             <h1 class="Formula1-Bold">F1 está de volta. E agora, é tudo sobre ACELERAR</h1>
-            <p class="Formula1-Regular">Restam apenas dez corridas em uma batalha pelo campeonato que fica cada vez mais acirrada.<br>Quem você apoia para levar o título?</p>
-            <a href="#" class="cta-button-outline Formula1-Bold"
-            id="openModal">O que vem agora?</a>
+            <p class="Formula1-Regular">Restam apenas dez corridas em uma batalha pelo campeonato que fica cada vez mais
+                acirrada.<br>Quem você apoia para levar o título?</p>
+            <a href="#" class="cta-button-outline Formula1-Bold" id="openModal">O que vem agora?</a>
         </div>
     </div>
 
     <div id="videoModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/msASko9u0v8?si=weexirtjnzRGba6-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/msASko9u0v8?si=weexirtjnzRGba6-"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 
     <script>
         // Abre o modal
-        document.getElementById('openModal').onclick = function() {
+        document.getElementById('openModal').onclick = function () {
             document.getElementById('videoModal').style.display = 'block';
         }
 
         // Fecha o modal
-        document.getElementById('closeModal').onclick = function() {
+        document.getElementById('closeModal').onclick = function () {
             document.getElementById('videoModal').style.display = 'none';
         }
 
         // Fecha o modal clicando fora dele
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == document.getElementById('videoModal')) {
                 document.getElementById('videoModal').style.display = 'none';
             }
         }
-    </script>
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 Fórmula 1. Todos os direitos reservados.</p>
-    <p><a href="">Política de Privacidade</a> | <a href="">Termos de Uso</a></p>
-</footer>
-
+    </script>  
 </body>
+
 </html>

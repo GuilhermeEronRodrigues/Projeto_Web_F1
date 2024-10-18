@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,98 +9,111 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-    body {
-    margin: 0;
-    font-family: 'Formula1-Bold', Arial, sans-serif;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    text-align: center;
-    overflow: hidden;
-     }
-    .cars-grid {
-    display: grid;
-    background-color: #ffffff;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
-    justify-items: center;
-    margin: 20px 0;
-   width: 100%;
-   height: 100%;
-}
+        body {
+            margin: 0;
+            font-family: 'Formula1-Bold', Arial, sans-serif;
+            color: rgb(0, 0, 0);
+            background-color: #ffffff;
+            text-align: center;
+            overflow: hidden;
+        }
 
-.cars-grid .car-item {
-    flex:auto;
-    transition: transform 0.3s ease;
-    text-align: center;
-}
+        .cars-grid {
+            display: grid;
+            background-color: #ffffff;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            margin: 20px 0;
+            width: 100%;
+            height: 100%;
+        }
 
-.car-item img {
-    width: 150%;
-    max-width: 380px;
-}
+        .cars-grid .car-item {
+            flex: auto;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
 
-
-.cars-grid .car-item:nth-child(1) {
-    grid-column: 1 / span 3;
-}
+        .car-item img {
+            width: 150%;
+            max-width: 380px;
+        }
 
 
-.car-item:hover {
-    transform: scale(1.05);
-}
+        .cars-grid .car-item:nth-child(1) {
+            grid-column: 1 / span 3;
+        }
+
+
+        .car-item:hover {
+            transform: scale(1.05);
+        }
 
 
 
-.car-item.aston-martin:hover {
-    box-shadow: 0 0 15px 5px #33a587; /* Verde da Aston Martin */
-}
+        .car-item.aston-martin:hover {
+            box-shadow: 0 0 15px 5px #33a587;
+            /* Verde da Aston Martin */
+        }
 
-.car-item.red-bull:hover {
-    box-shadow: 0 0 15px 5px #001dc4; /* Azul da Red Bull */
-}
+        .car-item.red-bull:hover {
+            box-shadow: 0 0 15px 5px #001dc4;
+            /* Azul da Red Bull */
+        }
 
-.car-item.ferrari:hover {
-    box-shadow: 0 0 15px 5px #dc0000; /* Vermelho da Ferrari */
-}
+        .car-item.ferrari:hover {
+            box-shadow: 0 0 15px 5px #dc0000;
+            /* Vermelho da Ferrari */
+        }
 
-.car-item.mercedes:hover {
-    box-shadow: 0 0 15px 5px #00d2be; /* Verde-água da Mercedes */
-}
+        .car-item.mercedes:hover {
+            box-shadow: 0 0 15px 5px #00d2be;
+            /* Verde-água da Mercedes */
+        }
 
-.car-item.haas:hover {
-    box-shadow: 0 0 15px 5px #6d6e71; /* Cinza da Haas */
-}
+        .car-item.haas:hover {
+            box-shadow: 0 0 15px 5px #6d6e71;
+            /* Cinza da Haas */
+        }
 
-.car-item.mclaren:hover {
-    box-shadow: 0 0 15px 5px #ff8700; /* Laranja da McLaren */
-}
+        .car-item.mclaren:hover {
+            box-shadow: 0 0 15px 5px #ff8700;
+            /* Laranja da McLaren */
+        }
 
-.car-item.alpine:hover {
-    box-shadow: 0 0 15px 5px #0090ff; /* Azul da Alpine */
-}
-.car-item.rb:hover{
-    box-shadow: 0 0 15px 5px #1434CB /* Azul Metalico da RB */ 
-}
+        .car-item.alpine:hover {
+            box-shadow: 0 0 15px 5px #0090ff;
+            /* Azul da Alpine */
+        }
 
-.car-item.sauber:hover {
-    box-shadow: 0 0 15px 5px #21f541; /* Verde da Sauber */
-}
+        .car-item.rb:hover {
+            box-shadow: 0 0 15px 5px #1434CB
+                /* Azul Metalico da RB */
+        }
 
-.car-item.williams:hover {
-    box-shadow: 0 0 15px 5px #679cff; /* Azul da Williams */
-}
+        .car-item.sauber:hover {
+            box-shadow: 0 0 15px 5px #21f541;
+            /* Verde da Sauber */
+        }
+
+        .car-item.williams:hover {
+            box-shadow: 0 0 15px 5px #679cff;
+            /* Azul da Williams */
+        }
 
 
-.car-name {
-font-size: 22px;
-font-weight: bold;
- margin-top: 10px;
-}
+        .car-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
     </style>
 </head>
+
 <body>
 
-    
+
     <div class="navbar">
         <a href="index.html" class="navbar-item logo">
             <img src="Imagens/Logos/f1_logo.png" alt="F1 Logo">
@@ -113,17 +127,21 @@ font-weight: bold;
     <!-- Grid dos carros -->
     <div class="cars-grid">
         <div class="car-item aston-martin">
+            <a href="astonmartin.html">
             <img src="Imagens/Carros/aston-martin.png" alt="Aston Martin">
+            </a>
             <div class="car-name">Aston Martin</div>
         </div>
         <div class="car-item red-bull">
             <a href="redbull.html">
-            <img src="Imagens/Carros/red-bull-racing.png" alt="Red Bull Racing">
-        </a>
+                <img src="Imagens/Carros/red-bull-racing.png" alt="Red Bull Racing">
+            </a>
             <div class="car-name">Red Bull Racing</div>
         </div>
         <div class="car-item ferrari">
+            <a href="ferrari.html">
             <img src="Imagens/Carros/ferrari.png" alt="Ferrari">
+            </a>
             <div class="car-name">Ferrari</div>
         </div>
         <div class="car-item mercedes">
@@ -162,4 +180,5 @@ font-weight: bold;
     </footer>
 
 </body>
+
 </html>

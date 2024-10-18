@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O que é a F1?</title>
     <link rel="icon" href="Favicon/F1_ico_64x64.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <style> 
+    <style>
         body {
             margin: 0;
             font-family: 'Formula1-Bold', Arial, sans-serif;
@@ -28,7 +29,7 @@
             text-align: center;
         }
 
-        
+
         .oque-e-f1-section::before {
             content: '';
             position: absolute;
@@ -40,7 +41,7 @@
             z-index: 1;
         }
 
-        
+
         .oque-e-f1-section h2,
         .oque-e-f1-section p,
         .oque-e-f1-section a {
@@ -78,7 +79,7 @@
             color: white;
         }
 
-        
+
         .modal {
             display: none;
             position: fixed;
@@ -88,7 +89,7 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         .modal-content {
@@ -122,6 +123,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="navbar">
@@ -137,7 +139,8 @@
     <div class="oque-e-f1-section">
         <div>
             <h2>O que é a F1?</h2>
-            <p>Descanso? Não existe essa palavra aqui. Um desafio? Temos um a cada semana. Mas isso? Isso é a Fórmula 1, onde cada segundo conta e cada detalhe faz a diferença.</p>
+            <p>Descanso? Não existe essa palavra aqui. Um desafio? Temos um a cada semana. Mas isso? Isso é a Fórmula 1,
+                onde cada segundo conta e cada detalhe faz a diferença.</p>
             <a href="#" class="cta-button-outline Formula1-Bold" id="openModal">Assista!</a>
         </div>
     </div>
@@ -146,32 +149,31 @@
     <div id="videoModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/UghAVkUMvIY?si=K7jsP4Bso0Ph-hVW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UghAVkUMvIY?si=K7jsP4Bso0Ph-hVW"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 
     <script>
         // Abre o modal
-        document.getElementById('openModal').onclick = function() {
+        document.getElementById('openModal').onclick = function () {
             document.getElementById('videoModal').style.display = 'block';
         }
 
         // Fecha o modal
-        document.getElementById('closeModal').onclick = function() {
+        document.getElementById('closeModal').onclick = function () {
             document.getElementById('videoModal').style.display = 'none';
         }
 
         // Fecha o modal clicando fora dele
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == document.getElementById('videoModal')) {
                 document.getElementById('videoModal').style.display = 'none';
             }
         }
     </script>
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 Fórmula 1. Todos os direitos reservados.</p>
-    <p><a href="">Política de Privacidade</a> | <a href="">Termos de Uso</a></p>
-</footer>
 </body>
+
 </html>
